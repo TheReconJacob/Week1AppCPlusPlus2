@@ -1,0 +1,3 @@
+﻿  Week1AppCPlusPlus2.cpp
+C:\Users\jvt05\Documents\Week1AppCPlusPlus2\Week1AppCPlusPlus2.cpp(8,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Week1AppCPlusPlus2.vcxproj -> C:\Users\jvt05\Documents\Week1AppCPlusPlus2\Debug\Week1AppCPlusPlus2.exe
