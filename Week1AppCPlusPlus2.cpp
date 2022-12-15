@@ -8,41 +8,45 @@ int main()
     srand(time(0));
     enum movementStates { stand, walk, run, crawl };
     
-    int currentMovement = (movementStates)(rand() % 4);
+    int currentMovement;
     std::string currentMovementValue;
     int nextMovement = 0;
     std::string nextMovementValue;
 
-    switch (currentMovement) {
-    case stand:
-        nextMovement = (movementStates)((rand() > RAND_MAX / 2) ? (int)walk : (int)crawl);
-        currentMovementValue = "standing";
-        break;
-    case walk:
-        nextMovement = (movementStates)((rand() > RAND_MAX / 2) ? (int)stand : (int)run);
-        currentMovementValue = "walking";
-        break;
-    case run:
-        nextMovement = (movementStates)walk;
-        currentMovementValue = "running";
-        break;
-    case crawl:  nextMovement = (movementStates)stand;
-        currentMovementValue = "crawling";
-        break;
-    }
+    for (int i = 0; i < 10; i++) {
+        currentMovement = (movementStates)(rand() % 4);
 
-    switch (nextMovement) {
-    case stand: nextMovementValue = "standing";
-        break;
-    case walk: nextMovementValue = "walking";
-        break;
-    case run: nextMovementValue = "running";
-        break;
-    case crawl: nextMovementValue = "crawling";
-        break;
-    }
+        switch (currentMovement) {
+        case stand:
+            nextMovement = (movementStates)((rand() > RAND_MAX / 2) ? (int)walk : (int)crawl);
+            currentMovementValue = "standing";
+            break;
+        case walk:
+            nextMovement = (movementStates)((rand() > RAND_MAX / 2) ? (int)stand : (int)run);
+            currentMovementValue = "walking";
+            break;
+        case run:
+            nextMovement = (movementStates)walk;
+            currentMovementValue = "running";
+            break;
+        case crawl:  nextMovement = (movementStates)stand;
+            currentMovementValue = "crawling";
+            break;
+        }
 
-    std::cout << "He went from " << currentMovementValue << " to " << nextMovementValue << "." << std::endl;
+        switch (nextMovement) {
+        case stand: nextMovementValue = "standing";
+            break;
+        case walk: nextMovementValue = "walking";
+            break;
+        case run: nextMovementValue = "running";
+            break;
+        case crawl: nextMovementValue = "crawling";
+            break;
+        }
+
+        std::cout << "He went from " << currentMovementValue << " to " << nextMovementValue << "." << std::endl;
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
