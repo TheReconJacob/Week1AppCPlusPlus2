@@ -8,7 +8,7 @@ int main()
     srand(time(0));
     enum movementStates { stand, walk, run, crawl };
     
-    int currentMovement;
+    int currentMovement = 0;
     std::string currentMovementValue;
     int nextMovement = 0;
     std::string nextMovementValue;
